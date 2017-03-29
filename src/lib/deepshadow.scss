@@ -1,0 +1,49 @@
+
+
+/* @mixin shadowed($deep)
+{
+	$blur:     8 + (8 * 0.75 * ($deep - 1));
+	$opacity:  min(0.50 + (0.095 * 0.75 * ($deep - 1)), 1);
+	$spread:   - + round($blur / 5);
+	$offset-h: 4 + (2 * 0.25 * ($deep - 1));
+	
+	box-shadow: 0 $offset-h + px $blur + px $spread + px rgba(0, 0, 0, $opacity), 0 0 2px 2px rgba(0, 0, 0, .05);
+}
+ */
+@mixin shadowed($level, $total-levels)
+{
+	// + 1 нужен для смещения нулевого уровня 
+	$deep: ($level * 2) + 1;
+	
+	$offset-h: 4 * 0.25 * $deep;
+	
+	$blur:   8 * 0.75 * $deep;
+	$spread: - + round($blur / $total-levels);
+	
+	$opacity:  min(0.50 + ((0.5 / $total-levels) * $level), 1);
+	
+	// @debug $opacity;
+	
+	box-shadow: 0 $offset-h + px $blur + px $spread + px rgba(0, 0, 0, $opacity), 0 0 2px 2px rgba(0, 0, 0, .05);
+}
+
+$total-levels: 10;
+
+@for $i from 0 through ($total-levels - 1)
+{
+	$prefix: dp;
+	$name: ".#{$prefix}-#{$i + 1}";
+	
+	// @debug ($i * 2) + ":" + ($i*2 + 2);
+	
+	#{$name}
+	{
+		@include shadowed($i, $total-levels);
+		&:hover { @include shadowed($i + 1, $total-levels); }
+	}
+}
+
+.dp-10 {
+  box-shadow: 0 19px 114px -11px rgba(0, 0, 0, 0.95), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-10:hover {
+    box-shadow: 0 21px 60px -13px rgba(0, 0, 0, 0.95), 0 0 2px 2px rgba(0, 0, 0, 0.05); }

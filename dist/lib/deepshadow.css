@@ -1,0 +1,65 @@
+/* @mixin shadowed($deep)
+{
+	$blur:     8 + (8 * 0.75 * ($deep - 1));
+	$opacity:  min(0.50 + (0.095 * 0.75 * ($deep - 1)), 1);
+	$spread:   - + round($blur / 5);
+	$offset-h: 4 + (2 * 0.25 * ($deep - 1));
+	
+	box-shadow: 0 $offset-h + px $blur + px $spread + px rgba(0, 0, 0, $opacity), 0 0 2px 2px rgba(0, 0, 0, .05);
+}
+ */
+.dp-1 {
+  box-shadow: 0 1px 6px -1px rgba(0, 0, 0, 0.5), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-1:hover {
+    box-shadow: 0 3px 18px -2px rgba(0, 0, 0, 0.55), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-2 {
+  box-shadow: 0 3px 18px -2px rgba(0, 0, 0, 0.55), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-2:hover {
+    box-shadow: 0 5px 30px -3px rgba(0, 0, 0, 0.6), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-3 {
+  box-shadow: 0 5px 30px -3px rgba(0, 0, 0, 0.6), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-3:hover {
+    box-shadow: 0 7px 42px -4px rgba(0, 0, 0, 0.65), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-4 {
+  box-shadow: 0 7px 42px -4px rgba(0, 0, 0, 0.65), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-4:hover {
+    box-shadow: 0 9px 54px -5px rgba(0, 0, 0, 0.7), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-5 {
+  box-shadow: 0 9px 54px -5px rgba(0, 0, 0, 0.7), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-5:hover {
+    box-shadow: 0 11px 66px -7px rgba(0, 0, 0, 0.75), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-6 {
+  box-shadow: 0 11px 66px -7px rgba(0, 0, 0, 0.75), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-6:hover {
+    box-shadow: 0 13px 78px -8px rgba(0, 0, 0, 0.8), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-7 {
+  box-shadow: 0 13px 78px -8px rgba(0, 0, 0, 0.8), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-7:hover {
+    box-shadow: 0 15px 90px -9px rgba(0, 0, 0, 0.85), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-8 {
+  box-shadow: 0 15px 90px -9px rgba(0, 0, 0, 0.85), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-8:hover {
+    box-shadow: 0 17px 102px -10px rgba(0, 0, 0, 0.9), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-9 {
+  box-shadow: 0 17px 102px -10px rgba(0, 0, 0, 0.9), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-9:hover {
+    box-shadow: 0 19px 114px -11px rgba(0, 0, 0, 0.95), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-10 {
+  box-shadow: 0 19px 114px -11px rgba(0, 0, 0, 0.95), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+  .dp-10:hover {
+    box-shadow: 0 21px 126px -13px black, 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-10 {
+  box-shadow: 0 19px 114px -11px rgba(0, 0, 0, 0.95), 0 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.dp-10:hover {
+  box-shadow: 0 21px 60px -13px rgba(0, 0, 0, 0.95), 0 0 2px 2px rgba(0, 0, 0, 0.05); }

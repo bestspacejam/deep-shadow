@@ -1,6 +1,6 @@
 @import '_mixins.scss';
 
-$total-levels: 5;
+$total-levels: 6;
 
 @for $i from 0 through ($total-levels - 1)
 {
@@ -13,3 +13,32 @@ $total-levels: 5;
 		&:hover { @include shadowit(round($i * 1.5) + 1); }
 	}
 }
+
+
+
+
+// // Standard Shadows
+// $md-shadow-1: 0  1px  3px rgba(#000, 0.10), 0  1px  1px rgba(#000, 0.23), 0 0 2px 2px rgba(0, 0, 0, 0.05);
+// $md-shadow-2: 0  5px 10px rgba(#000, 0.15), 0  3px  2px rgba(#000, 0.23), 0 0 2px 2px rgba(0, 0, 0, 0.05);
+// $md-shadow-3: 0 10px 20px rgba(#000, 0.20), 0  6px  5px rgba(#000, 0.23), 0 0 2px 2px rgba(0, 0, 0, 0.05);
+// $md-shadow-4: 0 14px 28px rgba(#000, 0.25), 0 10px  8px rgba(#000, 0.23), 0 0 2px 2px rgba(0, 0, 0, 0.05);
+// $md-shadow-5: 0 19px 38px rgba(#000, 0.30), 0 15px 12px rgba(#000, 0.23), 0 0 2px 2px rgba(0, 0, 0, 0.05);
+// $md-shadow-6: 0 24px 48px rgba(#000, 0.35), 0 20px 16px rgba(#000, 0.23), 0 0 2px 2px rgba(0, 0, 0, 0.05);
+
+
+
+// .dp-1 {
+//   box-shadow: $md-shadow-1;
+// }
+
+// .dp-2 {
+//   box-shadow: $md-shadow-2; }
+
+// .dp-3 {
+//   box-shadow: $md-shadow-3; }
+
+// .dp-4 {
+//   box-shadow: $md-shadow-4; }
+
+// .dp-5 { box-shadow: $md-shadow-5; }
+// .dp-6 { box-shadow: $md-shadow-6; }

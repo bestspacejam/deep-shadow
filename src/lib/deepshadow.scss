@@ -1,15 +1,4 @@
-
-@mixin shadowme($level)
-{
-	$offset: 3 * ($level + 1);
-	$blur: 8 * ($level + 1);
-	$spread: 1;
-	
-	// @debug $offset; 
-	
-	box-shadow: 0 $offset + px $blur + px (- $spread + px) rgba(0, 0, 0, 0.50), 0 0 2px 2px rgba(0, 0, 0, 0.05);
-}
-
+@import '_mixins.scss';
 
 $total-levels: 5;
 
@@ -20,7 +9,7 @@ $total-levels: 5;
 	
 	#{$name}
 	{
-		@include shadowme($i);
-		&:hover { @include shadowme(round($i * 1.5) + 1); }
+		@include shadowit($i);
+		&:hover { @include shadowit(round($i * 1.5) + 1); }
 	}
 }

@@ -1,0 +1,18 @@
+
+// @mixin shadowit($level)
+// {
+// 	$offset: 3 * ($level + 1);
+// 	$blur: 8 * ($level + 1);
+// 	$spread: 1;
+	
+// 	box-shadow: 0 $offset + px $blur + px (- $spread + px) rgba(0, 0, 0, 0.50), 0 0 2px 2px rgba(0, 0, 0, 0.05);
+// }
+
+@mixin shadowit($level)
+{
+	$offset: 2 * ($level + 1);
+	$blur: 8 * ($level + 1);
+	$spread: 1;
+	
+	box-shadow: 0 $offset + px $blur + px (- $spread + px) rgba(0, 0, 0, 0.25), 0 0 2px 2px rgba(0, 0, 0, 0.05);
+}

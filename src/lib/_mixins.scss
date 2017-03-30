@@ -1,4 +1,4 @@
-@mixin shadowit($level)
+@mixin shadowit($level: 0)
 {
 	$offset: 2 * ($level + 1);
 	$blur: 8 * ($level + 1);

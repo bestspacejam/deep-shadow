@@ -11,7 +11,7 @@ module.exports = function(grunt)
 			dist: {
 				files: {
 					'dist/lib/deepshadow.css': 'src/lib/deepshadow.scss',
-					'dist/style.css': 'src/style.scss'
+					'dist/temp/test-page-style.css': 'src/test/style.scss'
 				}
 			}
 		},
@@ -19,8 +19,7 @@ module.exports = function(grunt)
 		cssmin: {
 			testpage_concat: {
 				files: {
-					// 'css/index.css': ['src/css/style.css', 'dist/lib/deepshadow.css']
-					'css/index.css': ['dist/style.css', 'dist/lib/deepshadow.css']
+					'dist/temp/test-page-bundle.css': ['dist/temp/test-page-style.css', 'dist/lib/deepshadow.css']
 				}
 			},
 			 
@@ -38,7 +37,7 @@ module.exports = function(grunt)
 				},
 			
 				files: {
-					'dist/test/index.html': ['src/index.html']
+					'dist/test/index.html': ['src/test/index.html']
 				}
 			}
 		},
@@ -57,7 +56,7 @@ module.exports = function(grunt)
 		},
 		
 		clean: {
-			testpage_css_files: ['css/']
+			testpage_css_files: ['dist/temp/']
 		},
 		
 		

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 @mixin shadowit($level: 0)
-=======
-@mixin shadowit($level)
->>>>>>> refs/remotes/origin/master
 {
 	$offset: 2 * ($level + 1);
 	$blur: 8 * ($level + 1);
